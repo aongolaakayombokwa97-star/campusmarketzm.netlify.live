@@ -1,1 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Campus Market ZM</title>
+<link rel="stylesheet" href="style.css">
+</head>
 
+<body>
+
+<header>
+    <h1>Campus Market ZM 🇿🇲</h1>
+
+    <!-- Search -->
+    <input type="text" id="searchInput" placeholder="Search items...">
+
+    <!-- Auth Buttons -->
+    <div id="authButtons">
+        <button id="signupBtn" onclick="signup()">Sign Up</button>
+        <button id="loginBtn" onclick="login()">Login</button>
+        <button id="logoutBtn" onclick="logout()">Logout</button>
+    </div>
+
+    <!-- Dark Mode Toggle -->
+    <button id="darkToggle">🌙</button>
+</header>
+
+<!-- Category Buttons -->
+<section id="categories">
+    <button onclick="filterCategory('All')">All</button>
+    <button onclick="filterCategory('Phones')">Phones</button>
+    <button onclick="filterCategory('Laptops')">Laptops</button>
+    <button onclick="filterCategory('Rentals')">Rentals</button>
+    <button onclick="filterCategory('Services')">Services</button>
+</section>
+
+<!-- Product List -->
+<section id="productList"></section>
+
+<!-- Floating Post Button -->
+<button id="postBtn" class="postBtn">+</button>
+
+<!-- Post Item Form -->
+        <h2>Post Item</h2>
+        <input type="text" id="title" placeholder="Item Title" required>
+        <input type="text" id="price" placeholder="Price (e.g K3000)">
+        <input type="text" id="category" placeholder="Category (Phones, Laptops...)">
+        <input type="text" id="contact" placeholder="WhatsApp Number">
+        <input type="file" id="imageInput" accept="image/*">
+        <img id="imagePreview" src="https://via.placeholder.com/250x150?text=No+Image" class="productImg">
+        <textarea id="description" placeholder="Description"></textarea>
+        <button type="button" onclick="addProduct()">Submit</button>
+        <button type="button" onclick="hidePostForm()">Cancel</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
